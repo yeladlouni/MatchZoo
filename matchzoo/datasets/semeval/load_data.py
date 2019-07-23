@@ -79,6 +79,7 @@ def _download_data():
 
 
 def _read_data(path):
+    print(path)
     table = pd.read_json(path, lines=True)
     df = pd.DataFrame({
         'text_left': table['question'].str.join(' '),
