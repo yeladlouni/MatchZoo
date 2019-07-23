@@ -36,7 +36,7 @@ def load_data(
         raise ValueError(f"{stage} is not a valid stage."
                          f"Must be one of `train`, `dev`, and `test`.")
 
-    data_root = Path('/media/yassine/Data/PhD/allennlp/data')
+    data_root = Path('../../data/semeval')
     file_path = data_root.joinpath(f'{stage}.json')
     data_pack = _read_data(file_path)
     if filtered and stage in ('dev', 'test'):
